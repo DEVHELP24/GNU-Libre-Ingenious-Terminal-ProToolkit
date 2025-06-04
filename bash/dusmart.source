@@ -4,6 +4,6 @@
 #
 # The dusmart12, only shows folders greater then: 12 Mbyte !!
 
-function dusmart() { clear ; grep_out="${2:-$(basename '$1')}" ; du -c -d 9 -Bm -l -a -x "$1" 2> /dev/null  | grep -B 3 "$grep_out" | tac; }
+function dusmart() { clear ; grep_out="${2:-$(basename $1)}" ; du -c -d 9 -Bm -l -a -x "$1" 2> /dev/null  | grep -B 3 "$grep_out" | tac; }
 
-function dusmart12() { clear ; grep_out="${2:-$(basename '$1')}" ; du -c -d 9 -Bm -t 12M -l -a -x "$1" 2> /dev/null | grep -B 3 "$grep_out" | tac; }
+function dusmart12() { clear ; grep_out="${2:-$(basename $1)}" ; du -c -d 9 -Bm -t 12M -l -a -x "$1" 2> /dev/null | grep -B 3 "$grep_out" | tac; }
